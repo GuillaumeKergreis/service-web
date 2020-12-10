@@ -1,0 +1,14 @@
+<button class="btn btn-primary mb-3" (click)="init()">Refresh</button>
+<div class="row" *ngIf="loans$ | async as loans">
+    <div *ngFor="let loan of loans" class="col-lg-6">
+        <div class="card mb-3">
+            <h4 class="card-header">{{loan.book.name}} - {{loan.book.author}}</h4>
+            <div class="card-body">
+                <p class="card-text">Book copy : {{loan.loan.copyId}}</p>
+                <p class="card-text">Borrower : {{loan.user.name}}</p>
+                <p class="card-text">Loan date : {{loan.loan.loanDate}}</p>
+                <a class="btn btn-outline-primary" (click)="returnLoan(loan.loan)">Return</a>
+            </div>
+        </div>
+    </div>
+</div>
