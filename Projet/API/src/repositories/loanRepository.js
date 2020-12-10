@@ -47,6 +47,17 @@ class LoanRepository {
         return _.find(loans, {id});
     }
 
+    getByUserId(userId) {
+        const loans = this.getAll();
+        return _.filter(loans, {userId});
+    }
+
+    getBookAvailableCopies(bookId) {
+        const copies = this.copyRepository.getAll(bookId);
+        const loans = this.getAll();
+        return _.filter(copies, ({id}) => !_.some(loans, {copyId: id}));
+    }
+
     delete(id) {
         const path = this.getIdPath(id);
         if (path != null) {

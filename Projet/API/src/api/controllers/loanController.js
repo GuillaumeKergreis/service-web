@@ -23,6 +23,16 @@ class LoanController {
         }
     }
 
+    getByUserId(req, res) {
+        const loans = this.loanRepository.getByUserId(req.params.userId);
+        res.status(200).send(loans);
+    }
+
+    getBookAvailableCopies(req, res) {
+        const copies = this.loanRepository.getBookAvailableCopies(req.params.bookId);
+        res.status(200).send(copies);
+    }
+
     delete(req, res) {
         this.loanRepository.delete(req.params.loanId);
         res.status(204).send(null);
