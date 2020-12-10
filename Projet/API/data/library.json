@@ -56,9 +56,17 @@
     "loans": [
         {
             "userId": "2b793500-dabc-11e7-96d9-3f4994e35ed5",
+            "bookId": "231ac800-da86-11e7-b11a-f1a3b541af38",
             "copyId": "3e35b560-dac1-11e7-92c1-a1c74e59ace4",
             "loanDate": "2017/12/07",
             "id": "33d16140-dac2-11e7-a2f4-494b3ae468c5"
+        },
+        {
+            "userId": "90ae1dc9-5fe8-4615-9d5b-7459877e348d",
+            "bookId": "231ac800-da86-11e7-b11a-f1a3b541af38",
+            "copyId": "92be47b4-ad20-4e65-bf5f-cd63248878ed",
+            "loanDate": "2021/12/10",
+            "id": "247bb3f8-cf72-42a7-bd0e-dc5cab0696f2"
         }
     ]
 }
