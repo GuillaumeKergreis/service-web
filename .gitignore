@@ -4,3 +4,5 @@
 **/.suo
 **/node_modules
 debug.log
+
+.idea
